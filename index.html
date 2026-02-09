@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <div class="top-bar">
+    <h1>Resume Builder Pro</h1>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  </div>
+
+  <div class="progress-bar">
+    <div id="progress"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- FORM SIDE -->
+    <div class="form-section">
+
+      <!-- STEP 1 -->
+      <div class="step active">
+        <h2>Personal Information</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="text" id="linkedin" placeholder="LinkedIn">
+        <input type="text" id="github" placeholder="GitHub">
+        <input type="file" id="photo">
+        <button onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step">
+        <h2>Professional Summary</h2>
+        <textarea id="summary" placeholder="Write short summary"></textarea>
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step">
+        <h2>Skills</h2>
+        <input type="text" id="skillInput" placeholder="Enter skill">
+        <input type="number" id="skillLevel" placeholder="Skill % (0-100)">
+        <button onclick="addSkill()">Add Skill</button>
+        <ul id="skillList"></ul>
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="step">
+        <h2>Projects</h2>
+        <input type="text" id="projectTitle" placeholder="Project Title">
+        <textarea id="projectDesc" placeholder="Project Description"></textarea>
+        <button onclick="addProject()">Add Project</button>
+        <ul id="projectList"></ul>
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Preview</button>
+      </div>
+
+    </div>
+
+    <!-- PREVIEW SIDE -->
+    <div class="preview-section" id="resume">
+
+      <div class="preview-header">
+        <img id="previewPhoto" width="100">
+        <h2 id="p-name">Your Name</h2>
+        <p id="p-email"></p>
+        <p id="p-phone"></p>
+        <p id="p-linkedin"></p>
+        <p id="p-github"></p>
+      </div>
+
+      <h3>Summary</h3>
+      <p id="p-summary"></p>
+
+      <h3>Skills</h3>
+      <div id="p-skills"></div>
+
+      <h3>Projects</h3>
+      <ul id="p-projects"></ul>
+
+      <button onclick="downloadPDF()">Download PDF</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
