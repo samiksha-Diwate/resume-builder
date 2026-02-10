@@ -101,3 +101,13 @@ photoInput.addEventListener("change", function () {
         reader.readAsDataURL(file);
     }
 });
+const clearBtn = document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click", function () {
+
+    document.getElementById("resumeForm").reset();
+
+    document.getElementById("photoPreview").style.display = "none";
+    document.getElementById("previewPhoto").src = "";
+
+});

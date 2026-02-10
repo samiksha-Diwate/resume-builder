@@ -21,6 +21,8 @@
 
     <!-- FORM SIDE -->
     <div class="form-section">
+      <form id="resumeForm">
+
 
       <!-- STEP 1 -->
       <div class="step active">
@@ -43,6 +45,8 @@
         <textarea id="summary" placeholder="Write short summary"></textarea>
         <button onclick="prevStep()">Back</button>
         <button onclick="nextStep()">Next</button>
+        <button type="button" id="clearBtn">Clear Form</button>
+
       </div>
 
       <!-- STEP 3 -->
@@ -54,6 +58,8 @@
         <ul id="skillList"></ul>
         <button onclick="prevStep()">Back</button>
         <button onclick="nextStep()">Next</button>
+        <button type="button" id="clearBtn">Clear Form</button>
+
       </div>
 
       <!-- STEP 4 -->
@@ -65,7 +71,11 @@
         <ul id="projectList"></ul>
         <button onclick="prevStep()">Back</button>
         <button onclick="nextStep()">Preview</button>
+        <button type="button" id="clearBtn">Clear Form</button>
+
       </div>
+      </form>
+
 
     </div>
 
