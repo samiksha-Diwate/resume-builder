@@ -84,3 +84,20 @@ function addProject() {
 function downloadPDF() {
   html2pdf().from(document.getElementById("resume")).save("resume.pdf");
 }
+const photoInput = document.getElementById("photoInput");
+const photoPreview = document.getElementById("photoPreview");
+
+photoInput.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+            photoPreview.setAttribute("src", this.result);
+            photoPreview.style.display = "block";
+        });
+
+        reader.readAsDataURL(file);
+    }
+});

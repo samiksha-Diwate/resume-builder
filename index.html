@@ -31,6 +31,9 @@
         <input type="text" id="linkedin" placeholder="LinkedIn">
         <input type="text" id="github" placeholder="GitHub">
         <input type="file" id="photo">
+        <label>Profile Photo</label>
+        <input type="file" id="photoInput" accept="image/*">
+
         <button onclick="nextStep()">Next</button>
       </div>
 
@@ -76,6 +79,8 @@
         <p id="p-phone"></p>
         <p id="p-linkedin"></p>
         <p id="p-github"></p>
+        <img id="photoPreview" src="" alt="Profile Photo" style="width:120px; height:120px; border-radius:50%; display:none;">
+
       </div>
 
       <h3>Summary</h3>
