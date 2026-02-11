@@ -196,3 +196,16 @@ button:hover {
     object-fit: cover;
     border: 3px solid #4CAF50;
 }
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: #f0f0f0;
+}
