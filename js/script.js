@@ -111,3 +111,9 @@ clearBtn.addEventListener("click", function () {
     document.getElementById("previewPhoto").src = "";
 
 });
+const summary = document.getElementById("summary");
+const charCount = document.getElementById("charCount");
+
+summary.addEventListener("input", function(){
+    charCount.textContent = summary.value.length + " characters";
+});
