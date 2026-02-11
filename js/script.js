@@ -19,6 +19,8 @@ function prevStep() {
     currentStep--;
     showStep(currentStep);
   }
+  calculateScore();
+
 }
 
 showStep(currentStep);
@@ -117,3 +119,14 @@ const charCount = document.getElementById("charCount");
 summary.addEventListener("input", function(){
     charCount.textContent = summary.value.length + " characters";
 });
+function calculateScore() {
+    let score = 0;
+
+    if(document.getElementById("name").value !== "") score += 20;
+    if(document.getElementById("email").value !== "") score += 20;
+    if(document.getElementById("summary").value.length > 30) score += 20;
+    if(document.getElementById("skillList").children.length >= 2) score += 20;
+    if(document.getElementById("projectList").children.length >= 1) score += 20;
+
+    document.getElementById("resumeScore").textContent = score + " / 100";
+}
