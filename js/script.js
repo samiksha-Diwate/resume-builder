@@ -130,3 +130,11 @@ function calculateScore() {
 
     document.getElementById("resumeScore").textContent = score + " / 100";
 }
+function changeTemplate(template) {
+    const resume = document.getElementById("resume");
+
+    resume.classList.remove("classic");
+    resume.classList.remove("modern");
+
+    resume.classList.add(template);
+}

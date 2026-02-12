@@ -32,11 +32,12 @@
         <input type="text" id="phone" placeholder="Phone">
         <input type="text" id="linkedin" placeholder="LinkedIn">
         <input type="text" id="github" placeholder="GitHub">
-        <input type="file" id="photo">
+        
         <label>Profile Photo</label>
         <input type="file" id="photoInput" accept="image/*">
 
-        <button onclick="nextStep()">Next</button>
+        <button type="button" onclick="nextStep()">Next</button>
+
       </div>
 
       <!-- STEP 2 -->
@@ -45,8 +46,10 @@
         <textarea id="summary" placeholder="Write short summary"></textarea>
         <p id="charCount">0 characters</p>
 
-        <button onclick="prevStep()">Back</button>
-        <button onclick="nextStep()">Next</button>
+        <button type="button" onclick="prevStep()">Back</button>
+
+        <button type="button" onclick="nextStep()">Next</button>
+
         <button type="button" id="clearBtn">Clear Form</button>
 
       </div>
@@ -58,8 +61,10 @@
         <input type="number" id="skillLevel" placeholder="Skill % (0-100)">
         <button onclick="addSkill()">Add Skill</button>
         <ul id="skillList"></ul>
-        <button onclick="prevStep()">Back</button>
-        <button onclick="nextStep()">Next</button>
+       <button type="button" onclick="prevStep()">Back</button>
+
+        <button type="button" onclick="nextStep()">Next</button>
+
         <button type="button" id="clearBtn">Clear Form</button>
 
       </div>
@@ -71,8 +76,10 @@
         <textarea id="projectDesc" placeholder="Project Description"></textarea>
         <button onclick="addProject()">Add Project</button>
         <ul id="projectList"></ul>
-        <button onclick="prevStep()">Back</button>
-        <button onclick="nextStep()">Preview</button>
+        <button type="button" onclick="prevStep()">Back</button>
+
+        <button type="button" onclick="nextStep()">Next</button>
+
         <button type="button" id="clearBtn">Clear Form</button>
 
       </div>
@@ -82,7 +89,8 @@
     </div>
 
     <!-- PREVIEW SIDE -->
-    <div class="preview-section" id="resume">
+   <div class="preview-section classic" id="resume">
+
 
       <div class="preview-header">
         <img id="previewPhoto" width="100">
@@ -100,6 +108,12 @@
 
       <h3>Skills</h3>
       <div id="p-skills"></div>
+      <h3>Select Template</h3>
+     <select onchange="changeTemplate(this.value)">
+       <option value="classic">Classic</option>
+       <option value="modern">Modern</option>
+     </select>
+
 
       <h3>Projects</h3>
       <ul id="p-projects"></ul>

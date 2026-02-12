@@ -209,3 +209,14 @@ button:hover {
   transform: translateY(-3px);
   background: #f0f0f0;
 }
+.classic {
+  background: white;
+  color: black;
+}
+
+.modern {
+  background: #1e1e2f;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
